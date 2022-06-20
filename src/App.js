@@ -1,23 +1,91 @@
-import logo from './logo.svg';
 import './App.css';
-
+import ProgressLineMultiple from './Components/ProgressLineMuliple';
+import ProgressLineSingle from './Components/ProgressLineSingle';
+import RadTable from './Components/RadTable';
+import Charts from './Components/Charts';
+import { DoughnutChart } from './Components/Doughnut';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ width: '40%', margin: 'auto' }}>
+
+        <ProgressLineSingle
+          label="Tissue Labeling"
+          width="70"
+          type="horizontal"
+          size="medium"
+        />
+        <hr />
+        <ProgressLineSingle
+          label="Tissue Labeling"
+          width="60"
+          type="horizontal"
+        />
+        <hr />
+        <ProgressLineSingle
+          label="Tissue Labeling"
+          width="40"
+          size="medium"
+        />
+        <hr />
+        <ProgressLineSingle
+          label="Tissue Labeling"
+          width="40"
+        />
+        <hr />
+        <ProgressLineMultiple
+          size="medium"
+          progressParts={[
+            {
+              percentage: "20",
+              color: "#27C052"
+            },
+            {
+              percentage: "33",
+              color: "#ABD84B"
+            },
+            {
+              percentage: "15",
+              color: "#DF6666"
+            },
+          ]}
+        />
+        <hr />
+        <ProgressLineMultiple
+          progressParts={[
+            {
+              percentage: "50",
+              color: "#27C052"
+            },
+            {
+              percentage: "13",
+              color: "#ABD84B"
+            },
+            {
+              percentage: "15",
+              color: "#DF6666"
+            },
+          ]}
+        />
+
+      </div>
+      <div style={{ width: '40%', height: '20em', margin: 'auto', background: '#FFFFFF' }}>
+        <Charts />
+      </div>
+      <div style={{ width: '40%', height: '10em', margin: 'auto' }}>
+        <DoughnutChart />
+      </div>
+
+
+
+      <div style={{ width: '70%', margin: 'auto', padding: '1em' }}>
+        <RadTable />
+
+      </div>
+
+
+
+
     </div>
   );
 }
