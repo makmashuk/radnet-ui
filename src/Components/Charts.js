@@ -14,15 +14,15 @@ ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 const options = {
     responsive: true,
     // maintainAspectRatio: true,
-    aspectRatio:1,
+    aspectRatio: 1,
     scales: {
         xAxis: {
             beginAtZero: true,
-            grid:{
+            grid: {
                 // display:false,
-                lineWidth:0,
-                borderWidth:1,
-                tickWidth:3
+                lineWidth: 0,
+                borderWidth: 1,
+                tickWidth: 3
             },
             min: 0,
             max: 4,
@@ -44,8 +44,8 @@ const options = {
             }
         },
         yAxes: {
-            grid:{
-                borderColor:'#E0E0E0',
+            grid: {
+                borderColor: '#E0E0E0',
             },
             beginAtZero: true,
             lineWidth: 5,
@@ -82,87 +82,58 @@ const data = {
 
     datasets: [
         {
-            data: [
-                {
-                    x: 0.8,
-                    y: 10
-                }, {
-                    x: 1.3,
-                    y: 62
-                }, {
-                    x: 1.2,
-                    y: 15
-                },
-                {
-                    x: 0.6,
-                    y: 15
-                }, {
-                    x: 1.6,
-                    y: 78
-                }, {
-                    x: 1.1,
-                    y: 51
-                },
+            label: 'Chart 1',
+            data: [{ x: 1, y: 12 }, { x: 2, y: 40 }, { x: 3, y: 56 }],
+            fill: false,
+            showLine: true,
+            borderDash:[4,4],
+            pointBorderWidth: 8,
+            pointBorderColor: [
+                '#9BDDAD',
+                '#B5DC61',
+                '#DF6666',
             ],
-            backgroundColor: '#9BDDAD',
-            borderColor: '#9BDDAD',
-            pointBorderWidth: 8
+            pointBackgroundColor: [
+                '#9BDDAD',
+                '#B5DC61',
+                '#DF6666',
+            ],
         },
         {
-            data: [
-                {
-                    x: 2.1,
-                    y: 51
-                },
-                {
-                    x: 2.5,
-                    y: 48
-                },
-                {
-                    x: 2.2,
-                    y: 37
-                },
-                {
-                    x: 2.7,
-                    y: 35
-                },
-
+            label: 'Chart 1',
+            data: [{ x: 1, y: 22 }, { x: 2, y: 36 }, { x: 3, y: 66 }],
+            fill: false,
+            showLine: false,
+            pointBorderWidth: 8,
+            backgroundColor: [
+                '#9BDDAD',
+                '#B5DC61',
+                '#DF6666',
             ],
-            backgroundColor: '#B5DC61',
-            borderColor: '#B5DC61',
-            pointBorderWidth: 8
+            borderColor: [
+                '#9BDDAD',
+                '#B5DC61',
+                '#DF6666',
+            ],
         },
         {
-            data: [
-                {
-                    x: 3.0,
-                    y: 22
-                }, {
-                    x: 3.1,
-                    y: 65
-                },
-                {
-                    x: 3.7,
-                    y: 55
-                },
-                {
-                    x: 3.6,
-                    y: 45
-                },
-                {
-                    x: 3.5,
-                    y: 51
-                },
-                {
-                    x: 2.7,
-                    y: 70
-                },
-
+            label: 'Chart 1',
+            data: [{ x: 1, y: 72 }, { x: 2, y: 65 }, { x: 3, y: 16 }],
+            fill: false,
+            showLine: false,
+            pointBorderWidth: 8,
+            backgroundColor: [
+                '#9BDDAD',
+                '#B5DC61',
+                '#DF6666',
             ],
-            backgroundColor: '#DF6666',
-            borderColor: '#DF6666',
-            pointBorderWidth: 8
+            borderColor: [
+                '#9BDDAD',
+                '#B5DC61',
+                '#DF6666',
+            ],
         },
+
 
     ],
 };
