@@ -69,7 +69,7 @@ function App() {
         />
 
       </div>
-      <div style={{ width: '40%', height: '20em', margin: 'auto', background: '#FFFFFF' }}>
+      <div style={{ width: '30%', margin: 'auto', background: '#FFFFFF' }}>
         <Charts />
       </div>
       <div style={{ width: '40%', height: '10em', margin: 'auto' }}>

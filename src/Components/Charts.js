@@ -12,8 +12,9 @@ import { Scatter } from 'react-chartjs-2';
 ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 const options = {
-    // responsive: true,
-    maintainAspectRatio: true,
+    responsive: true,
+    // maintainAspectRatio: true,
+    aspectRatio:1,
     scales: {
         xAxis: {
             beginAtZero: true,
