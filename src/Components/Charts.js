@@ -13,8 +13,8 @@ ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 const options = {
     responsive: true,
-    // maintainAspectRatio: true,
     aspectRatio: 1,
+   
     scales: {
         xAxis: {
             beginAtZero: true,
@@ -64,13 +64,26 @@ const options = {
             display: false
         },
         tooltip: {
+            enabled:true,
             usePointStyle: true,
             displayColors: false,
             yAlign: 'bottom',
             xAlign: 'center',
+            fontSize:20,
+            fontWeight:"bold",
             callbacks: {
                 label: function (context) {
-                    let label = `${context.parsed.y} % Good Quality`;
+                    let lableText='';
+                    if(context.parsed.x === 1){
+                        lableText = "Perfect";
+                    }
+                    if(context.parsed.x === 2){
+                        lableText = "Good";
+                    }
+                    if(context.parsed.x === 3){
+                        lableText = "Bad";
+                    }
+                    let label = `${context.parsed.y}% ${lableText} Quality`;
                     return label;
                 }
             }
