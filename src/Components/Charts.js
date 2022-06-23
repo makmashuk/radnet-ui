@@ -14,6 +14,9 @@ ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 const options = {
     responsive: true,
     aspectRatio: 1,
+    layout: {
+        padding: 20
+    },
    
     scales: {
         xAxis: {
@@ -92,7 +95,6 @@ const options = {
 };
 
 const data = {
-
     datasets: [
         {
             label: 'Chart 1',

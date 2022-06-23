@@ -4,6 +4,8 @@ import ProgressLineSingle from './Components/ProgressLineSingle';
 import RadTable from './Components/RadTable';
 import Charts from './Components/Charts';
 import { DoughnutChart } from './Components/Doughnut';
+import LineChart from './Components/LineChart';
+
 function App() {
   return (
     <div className="App">
@@ -71,6 +73,9 @@ function App() {
       </div>
       <div style={{ width: '30%', margin: 'auto', background: '#FFFFFF' }}>
         <Charts />
+      </div>
+      <div style={{ width: '60%', margin: 'auto', background: '#FFFFFF' }}>
+        <LineChart />
       </div>
       <div style={{ width: '40%', height: '10em', margin: 'auto' }}>
         <DoughnutChart />
